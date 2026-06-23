@@ -52,6 +52,134 @@ const DIFERENCIAIS = [
 ];
 
 // =============================================
+// CSS INJETADO PELO COMPONENTE
+// Fonte de verdade para estilização das seções gerenciadas por este arquivo.
+// Sobrescreve qualquer regra conflitante do CSS da página.
+// =============================================
+const COMPONENTES_CSS = `
+  /* --- Por que correr com a Magic Blue --- */
+  .porquemagicblue { background: #FFFFFF; }
+
+  .diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .diferencial-card {
+    background: #F7F8FA;
+    border: 1px solid #E2E5EA;
+    border-radius: 12px;
+    padding: 32px 28px;
+    text-align: center;
+  }
+
+  .diferencial-num {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #f6633c;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -.01em;
+    display: block;
+  }
+
+  .diferencial-title {
+    font-size: 17px;
+    font-weight: 400;
+    color: #1C1C1E;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .diferencial-title strong {
+    font-weight: 700;
+  }
+
+  .diferencial-text {
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.6;
+  }
+
+  /* --- Depoimentos --- */
+  .depoimentos { background: #1A3A6B; }
+
+  .dep-carousel { width: 100%; }
+  .dep-slides { position: relative; }
+  .dep-slide { display: none; }
+  .dep-slide.active { display: block; }
+
+  .dep-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .dep-arrow {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    background: transparent;
+    color: rgba(255,255,255,0.6);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .2s, border-color .2s, color .2s;
+    flex-shrink: 0;
+  }
+  .dep-arrow:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.5);
+    color: #fff;
+  }
+
+  .dep-dots { display: flex; gap: 8px; align-items: center; }
+
+  .dep-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+    border: none; padding: 0;
+  }
+  .dep-dot.active { background: #F5A623; transform: scale(1.2); }
+
+  /* --- Eyebrow centralizado nas seções do componente --- */
+  .porquemagicblue .section-eyebrow,
+  .depoimentos .section-eyebrow {
+    text-align: center;
+    display: block;
+  }
+
+  .porquemagicblue .section-title,
+  .depoimentos .section-title {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .diferenciais-grid { grid-template-columns: 1fr; gap: 16px; }
+    .diferencial-card { padding: 24px 20px; }
+  }
+`;
+
+// =============================================
+// INJETAR CSS NO <head>
+// =============================================
+function injectCSS() {
+  if (document.getElementById('componentes-css')) return;
+  const style = document.createElement('style');
+  style.id = 'componentes-css';
+  style.textContent = COMPONENTES_CSS;
+  document.head.appendChild(style);
+}
+
+// =============================================
 // RENDERIZADORES
 // =============================================
 
@@ -61,12 +189,13 @@ const DIFERENCIAIS = [
  * @param {string} ctaText  - texto do botão
  */
 function renderPorqueCorrer(ctaHref, ctaText) {
+  injectCSS();
   const el = document.getElementById('porque-correr');
   if (!el) return;
 
   const cards = DIFERENCIAIS.map(d => `
     <div class="diferencial-card">
-      <div class="diferencial-num">${d.num}</div>
+      <span class="diferencial-num">${d.num}</span>
       <div class="diferencial-title">${d.titulo}</div>
       ${d.texto ? `<p class="diferencial-text">${d.texto}</p>` : ''}
     </div>
@@ -94,6 +223,7 @@ function renderPorqueCorrer(ctaHref, ctaText) {
  * @param {string} ctaText  - texto do botão
  */
 function renderDepoimentos(ctaHref, ctaText) {
+  injectCSS();
   const el = document.getElementById('depoimentos');
   if (!el) return;
 
@@ -130,7 +260,6 @@ function renderDepoimentos(ctaHref, ctaText) {
       <div class="section-inner">
         <span class="section-eyebrow">Quem já correu com a Magic Blue</span>
         <h2 class="section-title white">O que dizem<br>nossos corredores.</h2>
-
         <div class="dep-carousel" id="depCarousel">
           <div class="dep-slides">
             ${slides}
@@ -141,7 +270,6 @@ function renderDepoimentos(ctaHref, ctaText) {
             <button class="dep-arrow" onclick="depMove(1)" aria-label="Próximo">&#8594;</button>
           </div>
         </div>
-
         <div class="cta-mid" style="margin-top:48px;">
           <a href="${ctaHref}" class="btn-primary">${ctaText}</a>
         </div>
@@ -149,18 +277,16 @@ function renderDepoimentos(ctaHref, ctaText) {
     </section>
   `;
 
-  // Inicializar carrossel
   initDepCarousel();
 }
 
 /**
- * Inicializa o carrossel de depoimentos após renderização
+ * Inicializa o carrossel após renderização
  */
 function initDepCarousel() {
   var slides = document.querySelectorAll('.dep-slide');
   var dotsContainer = document.getElementById('depDots');
   var current = 0;
-
   if (!slides.length || !dotsContainer) return;
 
   slides.forEach(function(_, i) {
