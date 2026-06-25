@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="runDisney Springtime Surprise Weekend 2027 — 8 a 11 de abril no Walt Disney World Resort. 5K, 10K, 10-Miler e Desafio. Pacote completo com a Magic Blue Turismo.">
+<meta name="robots" content="index, follow">
+<title>runDisney Springtime Surprise Weekend 2027 — Magic Blue Turismo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1A3A6B;
+    --yellow: #F5A623;
+    --orange: #E8471A;
+    --dark: #0D1117;
+    --gray-bg: #F7F8FA;
+    --gray-border: #E2E5EA;
+    --text: #1C1C1E;
+    --text-muted: #6B7280;
+    --white: #FFFFFF;
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ===================== NAV ===================== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(26, 58, 107, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 0 40px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-logo-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--white);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-logo-text span { color: var(--yellow); }
+
+  .nav-cta {
+    background: var(--yellow);
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: opacity .2s;
+  }
+
+  .nav-cta:hover { opacity: .88; }
+
+  /* ===================== HERO ===================== */
+  .hero {
+    width: 100%;
+    background: #f6633c;
+    line-height: 0;
+  }
+
+  .hero-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .hero-overlay { display: none; }
+
+  .hero-content { display: none; }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(232, 71, 26, 0.2);
+    border: 1px solid rgba(232, 71, 26, 0.45);
+    color: #FF7A55;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: #FF7A55;
+    border-radius: 50%;
+    animation: pulse-dot 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .5; transform: scale(.7); }
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 9vw, 108px);
+    line-height: .95;
+    color: var(--white);
+    letter-spacing: .01em;
+    margin-bottom: 10px;
+  }
+
+  .hero-title .accent { color: var(--yellow); }
+
+  .hero-sub-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    color: rgba(255,255,255,0.7);
+    letter-spacing: .05em;
+    margin-bottom: 36px;
+  }
+
+  /* Countdown */
+  .countdown-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 40px;
+  }
+
+  .countdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .countdown-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 500;
+    color: var(--white);
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    min-width: 80px;
+    padding: 12px 8px;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .countdown-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+  }
+
+  .countdown-sep {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 40px;
+    color: rgba(255,255,255,0.3);
+    padding-top: 8px;
+    line-height: 1;
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+
+  .countdown-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+  }
+
+  /* Hero CTAs */
+  .hero-ctas {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--yellow);
+    color: var(--dark);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 16px 32px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform .15s, opacity .15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-primary:hover { transform: translateY(-1px); opacity: .92; }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 999px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    text-decoration: none;
+    transition: background .15s, border-color .15s;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.5);
+  }
+
+  .hero-disclaimer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* ===================== S02 ESCASSEZ ===================== */
+  .scarcity-bar {
+    background: #f6633c;
+    padding: 48px 40px;
+    text-align: center;
+  }
+
+  .scarcity-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .scarcity-month {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: .2em;
+    color: rgba(255,255,255,0.75);
+    text-transform: uppercase;
+  }
+
+  /* Countdown compacto na faixa */
+  .countdown-wrap-sm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .countdown-block-sm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .countdown-num-sm {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--white);
+    background: rgba(0,0,0,0.15);
+    border-radius: 8px;
+    min-width: 58px;
+    padding: 8px 6px;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .countdown-label-sm {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .countdown-sep-sm {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    color: rgba(255,255,255,0.4);
+    padding-bottom: 18px;
+    line-height: 1;
+  }
+
+  .scarcity-cta-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* ===================== SEÇÃO GENÉRICA ===================== */
+  section {
+    padding: 80px 40px;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 12px;
+    text-align: center;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    color: var(--text);
+    letter-spacing: .01em;
+    line-height: 1;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .section-title.white { color: var(--white); }
+
+  .section-sub {
+    font-size: 17px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 56px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-sub.white { color: rgba(255,255,255,0.65); }
+
+  /* ===================== S03 PROVAS ===================== */
+  .provas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .prova-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--gray-border);
+    background: var(--white);
+    transition: transform .2s, box-shadow .2s;
+  }
+
+  .prova-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+  }
+
+  .prova-img-wrap {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background: var(--gray-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .prova-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .prova-img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 100%;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .prova-img-placeholder .ph-icon {
+    font-size: 40px;
+    opacity: .3;
+  }
+
+  .prova-img-placeholder .ph-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .prova-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  .prova-body {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .prova-dist {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--orange);
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .prova-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: var(--text);
+    letter-spacing: .02em;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  .prova-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .prova-char {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy);
+    background: rgba(26, 58, 107, 0.06);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  /* ===================== S04 INCLUSO (dark) ===================== */
+  .section-dark {
+    background: var(--navy);
+  }
+
+  .incluso-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .incluso-item {
+    grid-column: span 2;
+  }
+
+  /* Linha 2: 2 cards centralizados */
+  .incluso-item:nth-child(4) { grid-column: 2 / span 2; }
+  .incluso-item:nth-child(5) { grid-column: 4 / span 2; }
+
+  .incluso-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: background .2s;
+  }
+
+  .incluso-item:hover {
+    background: rgba(255,255,255,0.07);
+  }
+
+  .incluso-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(245, 166, 35, 0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .incluso-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .incluso-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+  }
+
+  /* ===================== S05 POR QUE MB ===================== */
+  .porquemagicblue {
+    background: var(--white);
+  }
+
+  .diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .diferencial-card {
+    background: var(--gray-bg);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    text-align: center;
+  }
+
+  .diferencial-num {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 4px;
+    letter-spacing: -.01em;
+  }
+
+  .diferencial-title {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .diferencial-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* CTA intermediário */
+  .cta-mid {
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  /* ===================== S06 EXPERIÊNCIA ===================== */
+  .experiencia-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    margin-top: 56px;
+  }
+
+  .exp-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .exp-block.reverse {
+    direction: rtl;
+  }
+
+  .exp-block.reverse > * {
+    direction: ltr;
+  }
+
+  .exp-img {
+    border-radius: var(--radius);
+    aspect-ratio: 4/3;
+    background: var(--gray-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray-border);
+  }
+
+  .exp-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
+  }
+
+  .img-placeholder .ph-icon { font-size: 36px; opacity: .3; }
+
+  .img-placeholder .ph-text {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .exp-text-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 10px;
+  }
+
+  .exp-text h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    color: var(--text);
+    letter-spacing: .01em;
+    line-height: 1.05;
+    margin-bottom: 14px;
+  }
+
+  .exp-text p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ===================== S07 DEPOIMENTOS ===================== */
+  .depoimentos {
+    background: var(--navy);
+  }
+
+  .dep-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .dep-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Post IG placeholder */
+  .dep-ig-placeholder {
+    aspect-ratio: 1 / 1;
+    background: rgba(255,255,255,0.04);
+    border-radius: var(--radius-sm);
+    border: 1px dashed rgba(255,255,255,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .dep-ig-placeholder .ph-icon { font-size: 32px; opacity: .4; }
+
+  .dep-ig-placeholder .ph-text {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .dep-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dep-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--yellow);
+    flex-shrink: 0;
+  }
+
+  .dep-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .dep-handle {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ===================== S08 FAQ ===================== */
+  .faq-section {
+    background: var(--gray-bg);
+  }
+
+  .faq-list {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    gap: 16px;
+  }
+
+  .faq-question-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+
+  .faq-chevron {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--gray-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .25s, background .2s;
+    color: var(--navy);
+    font-size: 14px;
+  }
+
+  .faq-item.open .faq-chevron {
+    transform: rotate(180deg);
+    background: var(--yellow);
+    color: var(--dark);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease, padding .3s ease;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding: 0 24px;
+  }
+
+  .faq-answer.open {
+    max-height: 300px;
+    padding: 0 24px 20px;
+  }
+
+  /* ===================== S09 FORMULÁRIO ===================== */
+  .form-section {
+    position: relative;
+    background: var(--navy);
+    overflow: hidden;
+  }
+
+  .form-section-bg { display: none; }
+
+  .form-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .form-launch-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(232, 71, 26, 0.2);
+    border: 1px solid rgba(232, 71, 26, 0.4);
+    color: #FF7A55;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+
+  .form-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .form-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .form-field input,
+  .form-field select {
+    border: 1.5px solid var(--gray-border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    transition: border-color .15s;
+    outline: none;
+    width: 100%;
+  }
+
+  .form-field input:focus,
+  .form-field select:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(26, 58, 107, 0.1);
+  }
+
+  .form-field input::placeholder { color: var(--text-muted); }
+
+  /* Checkboxes das provas */
+  .provas-check-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .provas-check-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .prova-check-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1.5px solid var(--gray-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+  }
+
+  .prova-check-item:hover {
+    border-color: var(--navy);
+    background: rgba(26, 58, 107, 0.04);
+  }
+
+  .prova-check-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--navy);
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .prova-check-item input[type="checkbox"]:focus {
+    box-shadow: none;
+    border-color: transparent;
+  }
+
+  .prova-check-text { font-size: 13px; font-weight: 600; color: var(--text); }
+  .prova-check-dist { font-size: 11px; color: var(--text-muted); }
+
+  .btn-form {
+    width: 100%;
+    background: var(--yellow);
+    color: var(--dark);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: opacity .15s, transform .15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .btn-form:hover { opacity: .9; transform: translateY(-1px); }
+
+  .form-privacy {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 14px;
+    line-height: 1.5;
+  }
+
+  /* ===================== FOOTER ===================== */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 40px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .footer-logo img {
+    height: 64px;
+    width: auto;
+  }
+
+  .footer-text {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    transition: color .15s;
+  }
+
+  .footer-links a:hover { color: var(--yellow); }
+
+  /* ===================== WHATSAPP FLOAT ===================== */
+  .wa-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 200;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    transition: transform .2s;
+    text-decoration: none;
+  }
+
+  .wa-float:hover { transform: scale(1.08); }
+
+  .wa-float svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
+  }
+
+  /* ===================== RESPONSIVO ===================== */
+  @media (max-width: 768px) {
+
+    /* Hero mobile — imagem inteira sem corte */
+    .hero-bg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Zerar padding da section hero, mas respeitar nav */
+    .hero {
+      padding: 56px 0 0 0;
+    }
+
+    /* Nav */
+    nav {
+      padding: 0 16px;
+      height: 56px;
+    }
+    nav img { height: 28px; }
+    .nav-cta {
+      font-size: 12px;
+      padding: 8px 14px;
+    }
+
+    /* Seções */
+    section { padding: 48px 20px; }
+    .section-inner { padding: 0; }
+
+    /* Faixa laranja */
+    .scarcity-bar { padding: 32px 20px; }
+    .scarcity-inner { gap: 16px; }
+    .scarcity-month { font-size: 13px; letter-spacing: .1em; }
+
+    /* Countdown compacto */
+    .countdown-num-sm {
+      font-size: 26px;
+      min-width: 44px;
+      padding: 6px 4px;
+    }
+    .countdown-sep-sm { font-size: 20px; padding-bottom: 14px; }
+    .countdown-label-sm { font-size: 8px; }
+
+    /* Grid provas — 1 coluna */
+    .provas-grid { grid-template-columns: 1fr; gap: 16px; }
+
+    /* Grid incluso — 1 coluna */
+    .incluso-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .incluso-item { padding: 20px; grid-column: 1 !important; }
+
+    /* Grid diferenciais — 1 coluna */
+    .diferenciais-grid { grid-template-columns: 1fr; gap: 16px; }
+    .diferencial-card { padding: 24px 20px; }
+
+    /* Blocos de experiência — empilha vertical */
+    .exp-block,
+    .exp-block.reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      gap: 20px;
+      justify-items: center;
+      text-align: center;
+    }
+    .exp-block.reverse { direction: ltr; }
+    .exp-block .exp-img,
+    .exp-block.reverse .exp-img { width: 100%; }
+    .exp-img { aspect-ratio: 1/1; min-height: unset; max-width: 480px; margin: 0 auto; }
+    .exp-text h3 { font-size: 24px; }
+    .exp-text p { font-size: 14px; }
+
+    /* Depoimento — empilha vertical */
+    .depoimentos .section-inner > div[style*="grid-template-columns:1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Formulário */
+    .form-row { grid-template-columns: 1fr; }
+    .provas-check-grid { grid-template-columns: 1fr; }
+    .form-card { padding: 24px 16px; }
+    .btn-form { font-size: 14px; padding: 16px; }
+
+    /* Footer */
+    footer { padding: 40px 20px; }
+    .footer-links { gap: 12px; }
+
+    /* Depoimento — coluna única centralizada */
+    .dep-wrapper {
+      grid-template-columns: 1fr !important;
+      text-align: center;
+    }
+    .dep-wrapper > div:first-child {
+      aspect-ratio: 3/2;
+      max-height: 320px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .dep-wrapper > div:last-child > div:last-child {
+      justify-content: center;
+    }
+
+    /* WhatsApp float menor */
+    .wa-float { width: 48px; height: 48px; bottom: 16px; right: 16px; }
+    .wa-float svg { width: 24px; height: 24px; }
+
+    /* Botão CTA menor */
+    .btn-primary { font-size: 14px; padding: 14px 24px; }
+    .btn-secondary { font-size: 14px; padding: 14px 24px; }
+  }
+
+  @media (max-width: 480px) {
+    /* Faixa laranja — título em duas linhas se necessário */
+    .scarcity-bar h2 { white-space: normal !important; font-size: 32px !important; }
+
+    /* Countdown ainda menor */
+    .countdown-num-sm {
+      font-size: 22px;
+      min-width: 38px;
+    }
+    .countdown-sep-sm { font-size: 16px; padding-bottom: 12px; }
+
+    /* Prova card body */
+    .prova-body { padding: 14px; }
+    .prova-name { font-size: 20px; }
+
+    /* Depoimento — força 1 coluna com !important */
+    div[style*="grid-template-columns:1fr 1fr"] {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 24px !important;
+    }
+
+    /* Form campos */
+    .form-field input,
+    .form-field select { font-size: 16px; } /* evita zoom no iOS */
+
+    /* Section title menor */
+    .section-title { font-size: 32px !important; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+
+
+</style>
+
+<script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "SportsEvent",
+      "name": "runDisney Springtime Surprise Weekend 2027",
+      "startDate": "2027-04-08",
+      "endDate": "2027-04-11",
+      "location": {
+        "@type": "Place",
+        "name": "Walt Disney World Resort",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Orlando",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "runDisney"
+      },
+      "offers": {
+        "@type": "Offer",
+        "seller": {
+          "@type": "TravelAgency",
+          "name": "Magic Blue Turismo",
+          "url": "https://magicblueturismo.com.br"
+        }
+      },
+      "sport": "Running",
+      "description": "runDisney Springtime Surprise Weekend 2027 no Walt Disney World Resort. Provas de 5K, 10K, 10-Miler e Desafio de 8 a 11 de abril de 2027."
+    }
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <a href="index.html"><img src="imgs/magic_blue_logo.webp" alt="Magic Blue Turismo" style="height:36px;width:auto;"></a>
+  </div>
+  <a href="#formulario" class="nav-cta">Quero garantir minha vaga</a>
+</nav>
+
+<!-- S01 HERO -->
+<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">runDisney Springtime Surprise Weekend 2027 — Magic Blue Turismo</h1>
+<section class="hero" id="hero">
+  <picture>
+    <source media="(max-width: 768px)" srcset="imgs/hero-mobile.webp">
+    <img class="hero-bg" src="imgs/hero.webp" alt="runDisney Springtime Surprise Weekend 2027">
+  </picture>
+</section>
+
+<!-- S02 FAIXA LARANJA -->
+<div class="scarcity-bar">
+  <div class="scarcity-inner">
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,72px);color:#fff;letter-spacing:.03em;line-height:1;margin:0;white-space:nowrap;">Abril 2027 · <em>Walt Disney World</em></h2>
+    <p class="scarcity-cta-label">FALTAM PARA O EVENTO</p>
+    <div class="countdown-wrap-sm" id="countdown">
+      <div class="countdown-block-sm">
+        <span class="countdown-num-sm" id="cd-days">--</span>
+        <span class="countdown-label-sm">Dias</span>
+      </div>
+      <span class="countdown-sep-sm">:</span>
+      <div class="countdown-block-sm">
+        <span class="countdown-num-sm" id="cd-hours">--</span>
+        <span class="countdown-label-sm">Horas</span>
+      </div>
+      <span class="countdown-sep-sm">:</span>
+      <div class="countdown-block-sm">
+        <span class="countdown-num-sm" id="cd-minutes">--</span>
+        <span class="countdown-label-sm">Min</span>
+      </div>
+      <span class="countdown-sep-sm">:</span>
+      <div class="countdown-block-sm">
+        <span class="countdown-num-sm" id="cd-seconds">--</span>
+        <span class="countdown-label-sm">Seg</span>
+      </div>
+    </div>
+    <a href="#formulario" class="btn-primary" style="margin-top:8px;">Quero garantir minha vaga</a>
+  </div>
+</div>
+
+<!-- S03 AS PROVAS -->
+<section>
+  <div class="section-inner">
+    <p class="section-eyebrow"><em>run</em>Disney Springtime Surprise Weekend 2027 · 8 a 11 de abril</p>
+    <h2 class="section-title">3 Corridas, através dos anos,<br>dentro dos parques da Disney</h2>
+    <p class="section-sub">Uma jornada em percursos que celebram a história dos estúdios de animação <em>Walt Disney</em>. De 8 a 11 de abril, do digital ao atemporal, do Wonderland ao começo de tudo, os personagens tomam conta das pistas e você corre no meio deles.</p>
+
+    <div class="provas-grid">
+
+      <!-- PROVA 1: 5K -->
+      <div class="prova-card">
+        <div class="prova-img-wrap">
+          <a href="#formulario"><img src="imgs/5k.webp" alt="runDisney Springtime Surprise 5K 2027" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
+        </div>
+        <div class="prova-body">
+          <div class="prova-dist">5 km</div>
+          <div class="prova-name">Springtime Surprise 5K</div>
+          <p class="prova-desc">Sinta a adrenalina durante esta corrida de 5 km com Ralph e Vanellope do sucesso Detona Ralph, de 2012.</p>
+        </div>
+      </div>
+
+      <!-- PROVA 2: 10K -->
+      <div class="prova-card">
+        <div class="prova-img-wrap">
+          <a href="#formulario"><img src="imgs/10k.webp" alt="runDisney Springtime Surprise 10K 2027" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
+        </div>
+        <div class="prova-body">
+          <div class="prova-dist">10 km</div>
+          <div class="prova-name">Springtime Surprise 10K</div>
+          <p class="prova-desc">A meta é de 10 km em uma corrida organizada por Robin Hood e sua turma do filme Robin Hood, de 1973.</p>
+        </div>
+      </div>
+
+      <!-- PROVA 3: 10-Miler -->
+      <div class="prova-card">
+        <div class="prova-img-wrap">
+          <a href="#formulario"><img src="imgs/10Miler.webp" alt="runDisney Springtime Surprise 10-Miler 2027" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
+        </div>
+        <div class="prova-body">
+          <div class="prova-dist">16 km</div>
+          <div class="prova-name">Springtime Surprise 10-Miler</div>
+          <p class="prova-desc">Junte-se à Alice e ao Gato de Cheshire para um percurso de 16 km inspirado no sucesso de 1951, Alice no País das Maravilhas.</p>
+        </div>
+      </div>
+
+      <!-- PROVA 4: Challenge -->
+      <div class="prova-card">
+        <div class="prova-img-wrap">
+          <a href="#formulario"><img src="imgs/Challenge.webp" alt="runDisney Springtime Surprise Desafio 2027" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
+        </div>
+        <div class="prova-body">
+          <div class="prova-dist">31 km total</div>
+          <div class="prova-name">Springtime Surprise Desafio</div>
+          <p class="prova-desc">Complete as três corridas, em um total de 31 km, e receba uma medalha bônus com o Mickey do clássico desenho animado Steamboat Willie, de 1928.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- S04 O QUE ESTÁ INCLUSO -->
+<section class="section-dark">
+  <div class="section-inner">
+    <p class="section-eyebrow">Pacote Magic Blue</p>
+    <h2 class="section-title white">O que está<br>incluso no pacote.</h2>
+    <div class="incluso-grid">
+      <div class="incluso-item" style="text-align:center;">
+        <div class="incluso-title">Inscrição garantida</div>
+        <p class="incluso-text">Sua vaga na prova escolhida já confirmada, sem depender da abertura oficial, que esgota em minutos.</p>
+      </div>
+      <div class="incluso-item" style="text-align:center;">
+        <div class="incluso-title">Hospedagem</div>
+        <p class="incluso-text">3 noites em hotel econômico dentro do complexo Disney (All-Star Sports ou similar), com transporte oficial.</p>
+      </div>
+      <div class="incluso-item" style="text-align:center;">
+        <div class="incluso-title">Traslado</div>
+        <p class="incluso-text">Hotel/Expo, Hotel/Prova e traslados ilimitados para os parques e <em>Disney Springs</em>.</p>
+      </div>
+      <div class="incluso-item" style="text-align:center;">
+        <div class="incluso-title">Acesso à Expo e Bib Pickup</div>
+        <p class="incluso-text">Retirada do número de peito (bib) na <em>run</em>Disney Health &amp; Fitness Expo, obrigatório para largar.</p>
+      </div>
+      <div class="incluso-item" style="text-align:center;">
+        <div class="incluso-title">Suporte da especialista <em>run</em>Disney</div>
+        <p class="incluso-text">Uma especialista dedicada acompanha você da inscrição ao race day.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:48px;text-align:center;">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,42px);color:#fff;letter-spacing:.02em;margin-bottom:8px;">Pacote <em>run</em>Disney + Hospedagem</h3>
+      <p style="font-size:13px;color:var(--orange);font-weight:600;letter-spacing:.04em;margin-bottom:24px;">Disney's All-Star Sports Resort · mínimo de 3 noites · preço por pessoa em dólar</p>
+      <img src="imgs/Springtime-Surprise-tabela.png" alt="Tabela de preços Springtime Surprise 2027" style="max-width:100%;height:auto;border-radius:12px;">
+      <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:12px;line-height:1.5;">*Preços e condições sujeitos a alteração sem aviso prévio e reservas conforme disponibilidade de lugares.</p>
+    </div>
+
+    <div class="cta-mid">
+      <a href="#formulario" class="btn-primary">Quero garantir minha vaga</a>
+    </div>
+  </div>
+</section>
+
+<!-- S05 POR QUE MAGIC BLUE -->
+<div id="porque-correr"></div>
+
+<!-- S06 A EXPERIÊNCIA ALÉM DA CORRIDA -->
+<section>
+  <div class="section-inner">
+    <p class="section-eyebrow"><em>run</em>Disney — o que esperar</p>
+    <h2 class="section-title">Muito mais que uma corrida.</h2>
+    <p class="section-sub">Para quem nunca fez uma <em>run</em>Disney o evento vai muito além dos quilômetros percorridos...</p>
+
+    <div class="experiencia-blocks">
+
+      <!-- Bloco 1: Expo -->
+      <div class="exp-block">
+        <div class="exp-img">
+          <img src="imgs/expo-bib.webp" alt="Expo runDisney - Bib Pickup" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="exp-text">
+          <p class="exp-text-eyebrow">Expo &amp; Bib Pickup</p>
+          <h3>O aquecimento oficial.</h3>
+          <p>Todos os atletas passam pela <em>run</em>Disney Health &amp; Fitness Expo para retirar o BIB (número de peito) e sentir a energia do evento. É obrigatório pois sem o BIB não pode correr.</p>
+        </div>
+      </div>
+
+      <!-- Bloco 2: Percurso -->
+      <div class="exp-block reverse">
+        <div class="exp-img">
+          <img src="imgs/percurso.webp" alt="Percurso runDisney dentro dos parques" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="exp-text">
+          <p class="exp-text-eyebrow">O percurso</p>
+          <h3>Você corre dentro dos parques.</h3>
+          <p>Você corre pelos parques <em>EPCOT</em> e Disney's <em>Hollywood Studios</em> e também passa pelo BoardWalk, dependendo da corrida. Há personagens ao longo dos trajetos para fotos. Largada ao amanhecer.</p>
+        </div>
+      </div>
+
+      <!-- Bloco 3: Trajes -->
+      <div class="exp-block">
+        <div class="exp-img">
+          <img src="imgs/personagens.webp" alt="Personagens no percurso runDisney" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="exp-text">
+          <p class="exp-text-eyebrow">Trajes e personagens</p>
+          <h3>Faz parte da experiência.</h3>
+          <p>Fantasias temáticas e encontros com personagens ao longo do percurso. Porque correr na Disney é diferente de qualquer outra corrida.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- S07 DEPOIMENTOS -->
+<div id="depoimentos"></div>
+
+<!-- S08 FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Dúvidas frequentes</p>
+    <h2 class="section-title">Perguntas<br>Frequentes.</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Preciso correr todas as provas para participar do pacote?</span>
+          <span class="faq-chevron">&#8964;</span>
+        </button>
+        <div class="faq-answer">
+          Não. Você pode escolher uma prova isolada (5K, 10K ou 10-Miler) ou optar pelo Challenge, que combina duas provas e garante a medalha bônus. O pacote Magic Blue é montado de acordo com as provas que você escolher.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">O que é a Challenge e quem pode fazer?</span>
+          <span class="faq-chevron">&#8964;</span>
+        </button>
+        <div class="faq-answer">
+          A Challenge é a combinação de todas as provas do weekend. Ao completá-las você recebe uma medalha bônus exclusiva. Não há exigência física adicional além de completar as provas dentro dos paces mínimos de cada uma.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Como funciona o acesso garantido da Magic Blue?</span>
+          <span class="faq-chevron">&#8964;</span>
+        </button>
+        <div class="faq-answer">
+          A Magic Blue tem um bloco de vagas reservado que não depende do registro público. Quando as inscrições gerais esgotam — como aconteceu com o Marathon Weekend 2027 em 82 minutos —, quem entrou na lista com a Magic Blue já estava dentro. É por isso que o prazo de interesse é antes do lançamento.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">O que é proof of time?</span>
+          <span class="faq-chevron">&#8964;</span>
+        </button>
+        <div class="faq-answer">
+          Proof of time é o comprovante de uma corrida cronometrada anterior que indica seu pace. Exigido pela <em>run</em>Disney para posicionar o atleta no corral correto. Para o 5K não é exigido. Para as demais provas, é necessário para largar nas primeiras ondas. A Magic Blue orienta como submeter corretamente.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Preciso de visto americano?</span>
+          <span class="faq-chevron">&#8964;</span>
+        </button>
+        <div class="faq-answer">
+          Sim. Todos os eventos <em>run</em>Disney são em Orlando, EUA. Brasileiros precisam de visto americano válido. Recomenda-se iniciar o processo com no mínimo 6 meses de antecedência. A Magic Blue oferece assessoria de visto como serviço adicional. Fale com a nossa especialista e chegue no dia da prova sem essa preocupação.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Qual nível físico preciso ter para correr?</span>
+          <span class="faq-chevron">&#8964;</span>
+        </button>
+        <div class="faq-answer">
+          A <em>run</em>Disney exige um pace mínimo — corredores que ficam abaixo do pace são retirados do percurso por varredores. O pace mínimo varia por prova (em geral, 16 minutos por milha — aproximadamente 10 min/km). A Magic Blue orienta um plano de treino adequado ao perfil do corredor.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Quando abrem as inscrições e como eu entro na lista?</span>
+          <span class="faq-chevron">&#8964;</span>
+        </button>
+        <div class="faq-answer">
+          As vendas da Magic Blue para o Springtime Surprise Weekend 2027 estão liberadas. Preencha o formulário nesta página e garanta sua vaga.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- S09 FORMULÁRIO -->
+<section class="form-section" id="formulario">
+  <div class="form-section-bg"></div>
+  <div class="form-inner">
+    <h2 class="section-title white" style="text-align:center;">Garanta sua vaga na<br>Springtime Surprise 2027</h2>
+    <p class="section-sub white" style="margin:0 auto 0; text-align:center; max-width:480px;">
+      Preencha abaixo. Nossa especialista entrará em contato com todas as informações.
+    </p>
+
+    <div class="form-card">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" placeholder="Seu nome" autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" autocomplete="email">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="celular">Celular (WhatsApp)</label>
+        <input type="tel" id="celular" placeholder="(11) 99999-9999" autocomplete="tel">
+      </div>
+
+      <div>
+        <span class="provas-check-label">Qual prova tem interesse? (pode marcar mais de uma)</span>
+        <div class="provas-check-grid">
+          <label class="prova-check-item">
+            <input type="checkbox" name="prova" value="5k">
+            <div>
+              <div class="prova-check-text">5K</div>
+              <div class="prova-check-dist">5 km · Ralph</div>
+            </div>
+          </label>
+          <label class="prova-check-item">
+            <input type="checkbox" name="prova" value="10k">
+            <div>
+              <div class="prova-check-text">10K</div>
+              <div class="prova-check-dist">10 km · Robin Hood</div>
+            </div>
+          </label>
+          <label class="prova-check-item">
+            <input type="checkbox" name="prova" value="10miler">
+            <div>
+              <div class="prova-check-text">10-Miler</div>
+              <div class="prova-check-dist">16 km · Alice</div>
+            </div>
+          </label>
+          <label class="prova-check-item">
+            <input type="checkbox" name="prova" value="challenge">
+            <div>
+              <div class="prova-check-text">Desafio</div>
+              <div class="prova-check-dist">31 km total · Mickey Steamboat Willie</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="acomodacao">Acomodação</label>
+        <select id="acomodacao">
+          <option value="" disabled selected>Selecione</option>
+          <option value="single">Single (1 pessoa)</option>
+          <option value="duplo">Duplo (2 pessoas)</option>
+          <option value="triplo">Triplo (3 pessoas)</option>
+          <option value="quadruplo">Quádruplo (4 pessoas)</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <span class="provas-check-label">Acompanhante</span>
+        <div style="display:flex;gap:24px;margin-bottom:10px;">
+          <label style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;cursor:pointer;line-height:1;">
+            <input type="radio" name="acompanhante" value="sim"
+              style="width:16px;height:16px;flex-shrink:0;margin:0;padding:0;cursor:pointer;accent-color:#1A3A6B;vertical-align:middle;"
+              onchange="document.getElementById('qtd-acompanhante').style.display='block'">
+            <span>Sim</span>
+          </label>
+          <label style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;cursor:pointer;line-height:1;">
+            <input type="radio" name="acompanhante" value="nao"
+              style="width:16px;height:16px;flex-shrink:0;margin:0;padding:0;cursor:pointer;accent-color:#1A3A6B;vertical-align:middle;"
+              onchange="document.getElementById('qtd-acompanhante').style.display='none'">
+            <span>Não</span>
+          </label>
+        </div>
+        <div id="qtd-acompanhante" style="display:none;">
+          <input type="number" id="num-acompanhantes" placeholder="Quantos acompanhantes?" min="1" max="10" style="border:1.5px solid var(--gray-border);border-radius:var(--radius-sm);padding:12px 14px;font-size:14px;font-family:'Inter',sans-serif;width:100%;outline:none;">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="rundisney_antes">Já fez alguma corrida <em>run</em>Disney antes?</label>
+        <select id="rundisney_antes">
+          <option value="" disabled selected>Selecione</option>
+          <option value="sim">Sim, já corri</option>
+          <option value="nao">Não, será minha primeira</option>
+        </select>
+      </div>
+
+      <button class="btn-form" onclick="handleSubmit()">
+        Quero garantir minha vaga
+      </button>
+      <p class="form-privacy">
+        Seus dados são confidenciais e usados exclusivamente pela Magic Blue Turismo
+        para contato sobre este produto. Sem spam.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><img src="imgs/magic_blue_logo.webp" alt="Magic Blue Turismo"></div>
+  <p class="footer-text">
+    Especialista em Disney e <em>run</em>Disney<br>
+    Magic Blue Viagens e Turismo Sociedade Unipessoal Ltda · CNPJ 20.118.064/0001-07<br>
+    Rodovia Raposo Tavares, KM 22,14, Lageadinho · São Paulo/Cotia · CEP 06709-015
+  </p>
+  <div class="footer-links">
+    <a href="#">Instagram</a>
+    <a href="#">WhatsApp</a>
+    <a href="#">Site Magic Blue</a>
+  </div>
+  <p style="font-size:11px;color:rgba(255,255,255,0.2);margin-top:20px;">
+    © 2026 Disney. Todos os direitos reservados.
+  </p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511952714877" target="_blank" class="wa-float" aria-label="Falar via WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  // Countdown para 07/07/2026 às 10:00 (horário de Brasília, UTC-3)
+  const launchDate = new Date('2027-04-08T05:30:00-05:00');
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = launchDate - now;
+
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML =
+        '<div style="font-family:\'JetBrains Mono\',monospace;font-size:18px;color:#F5A623;letter-spacing:.05em;">INSCRIÇÕES ABERTAS</div>';
+      return;
+    }
+
+    const days    = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours   = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById('cd-days').textContent    = String(days).padStart(2, '0');
+    document.getElementById('cd-hours').textContent   = String(hours).padStart(2, '0');
+    document.getElementById('cd-minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('cd-seconds').textContent = String(seconds).padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+
+    // Fecha todos
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').classList.remove('open');
+    });
+
+    // Abre o clicado (se não estava aberto)
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.classList.add('open');
+    }
+  }
+
+  // Submit do formulário
+  function handleSubmit() {
+    const nome    = document.getElementById('nome').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const celular = document.getElementById('celular').value.trim();
+    const provas  = Array.from(document.querySelectorAll('input[name="prova"]:checked')).map(c => c.value);
+
+    if (!nome || !email || !celular) {
+      alert('Por favor, preencha nome, e-mail e celular para continuar.');
+      return;
+    }
+
+    // SUBSTITUIR: integrar com RD Station ou redirecionar para WhatsApp com dados
+    const msg = encodeURIComponent(
+      `Olá! Tenho interesse no pacote <em>run</em>Disney Springtime Surprise 2027.\n\nNome: ${nome}\nE-mail: ${email}\nProvas: ${provas.length ? provas.join(', ') : 'a definir'}`
+    );
+
+    // Redireciona para WhatsApp com mensagem pré-preenchida
+    window.open(`https://api.whatsapp.com/send?l=pt_BR&phone=5511952714877&text=${msg}`, '_blank');
+  }
+</script>
+
+  <script src="componentes.js"></script>
+  <script>
+    renderPorqueCorrer('#formulario', 'Quero garantir minha vaga');
+    renderDepoimentos('#formulario', 'Quero garantir minha vaga');
+  </script>
+
+
+</body>
+</html>
