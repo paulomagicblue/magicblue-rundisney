@@ -252,7 +252,7 @@ function renderDepoimentos(ctaHref, ctaText) {
     <section class="depoimentos">
       <div class="section-inner">
         <span class="section-eyebrow">Quem já correu com a Magic Blue</span>
-        <h2 class="section-title white">O que dizem<br>nossos corredores.</h2>
+        <h2 class="section-title white">O que dizem<br>nossos corredores</h2>
         <div class="dep-carousel" id="depCarousel">
           <div class="dep-slides">
             ${slides}
